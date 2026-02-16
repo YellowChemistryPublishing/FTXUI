@@ -31,7 +31,6 @@ struct TaskQueue {
   mutable std::mutex mutex_;
   std::queue<PendingTask> immediate_tasks_;
   std::priority_queue<PendingTask> delayed_tasks_;
-  std::mutex mutex_;
 };
 
 }  // namespace ftxui::task
